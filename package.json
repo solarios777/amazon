@@ -21,6 +21,7 @@
     "react-icons": "^5.2.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.24.1",
+    "react-spinners": "^0.14.1",
     "react-styled-components": "^0.1.11",
     "styled-components": "^6.1.11"
   },

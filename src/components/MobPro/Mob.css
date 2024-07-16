@@ -48,17 +48,8 @@
     height: 150px;
   }
 }
-/* Styles for screens under 768px */
-@media (max-width: 400px) { 
-  /* .product-grid {
-    grid-template-columns: 1fr;
-  }
 
-  /* .product-card {
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-  } */
+@media (max-width: 400px) { 
 .category h2{
     font-size: 18px;
 }
@@ -72,7 +63,7 @@
   }
 }
 
-/* Styles for screens under 480px */
+
 @media (max-width: 270px) {
   .container {
     gap: 1.5rem;
