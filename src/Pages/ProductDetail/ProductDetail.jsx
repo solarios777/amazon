@@ -34,11 +34,14 @@ const ProductDetail = () => {
           <Loader />
         </div>
       ) : (
-          <ProductCard product={product}
-            flex={true}
-            renderDesc={true}
-            renderAdd={true}
-          />
+        <ProductCard
+          product={product}
+          flex={true}
+          renderDesc={true}
+          renderAdd={true}
+          needpra={true}
+          forcart={false}
+        />
       )}
     </div>
   );

@@ -13,7 +13,7 @@ export const categoryInfos = [
 
   {
     title: "Men's Clothing",
-    name: "nen's clothing",
+    name: "men's clothing",
     imgLink: "https://m.media-amazon.com/images/I/712JkmKsvYL._AC_UL320_.jpg",
   },
 

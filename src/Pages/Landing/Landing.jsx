@@ -4,6 +4,7 @@ import Carouselc from '../../components/Carouselc/Carouselc';
 import Category from '../../components/Category/Category';
 import Product from '../../components/Product/Product';
 import Mob from '../../components/MobPro/Mob';
+import Footer from '../../components/Footer/Footer';
 
 const Landing = () => {
   return (
@@ -16,6 +17,7 @@ const Landing = () => {
       <div className="mob-container">
         <Mob/>
       </div>
+      <Footer/>
     </div>
   );
 }

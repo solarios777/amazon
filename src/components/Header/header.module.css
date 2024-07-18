@@ -191,7 +191,7 @@
   }
 .logo_container{padding-left: 2%;}
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header_container {
     height: auto;
     flex-wrap: wrap;

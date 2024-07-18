@@ -5,7 +5,6 @@
   color: black;
   text-decoration: none;
   position: relative;
-  
 }
 .card_container:hover .button {
   display: block;
@@ -16,9 +15,10 @@
   height: 200px;
   object-fit: contain;
 }
- .card_container div h3,.card_container div div {
+.card_container div h3,
+.card_container div div {
   padding: 2%;
- }
+}
 .button {
   display: none;
   padding: 5px 10px;
@@ -44,41 +44,36 @@
 }
 .products_container {
   display: grid;
-  
+
   grid-template-columns: repeat(5, minmax(200px, 1fr));
-  
+
   max-width: 1450px;
   margin: 100px auto 100px auto;
   column-gap: 6%;
   row-gap: 3%;
   justify-items: center;
-  
+
   /* overflow-x: scroll; */
-
 }
-@media (max-width: 970px) { 
-  
-  .products_container{
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
+@media (max-width: 970px) {
+  .products_container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 .products_container section {
-  
   margin: 0 auto;
 }
 
-@media (max-width: 1300px) { 
-  .card_container div h3{
+@media (max-width: 1300px) {
+  .card_container div h3 {
     font-size: 16px;
   }
-  .products_container{
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
+  .products_container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 
-.prduct_flexed{
+.prduct_flexed {
   box-shadow: none;
   height: auto;
   display: flex;
@@ -86,23 +81,166 @@
   width: 100%;
   /* height: 50vh; */
 }
-.prduct_flexed h3{
+.prduct_flexed h3 {
   padding: 20px 0px;
 }
-.prduct_flexed .button{
+.prduct_flexed .button {
   display: block;
   position: static;
   width: 150px;
   margin-right: 40px;
 }
-.prduct_flexed img{
+.prduct_flexed img {
   width: 300px !important;
   height: auto;
 }
-@media (max-width:768px) {
-  .prduct_flexed{
+@media (max-width: 768px) {
+  .prduct_flexed {
     display: flex;
     flex-direction: column;
   }
-  
+  .product_forcart{
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (max-width: 500px) {
+  .prduct_flexed img {
+    max-width: 200px;
+  }
+}
+@media (max-width: 450px) {
+  .prduct_flexed img {
+    max-width: 150px;
+  }
+}
+@media (max-width: 400px) {
+  .prduct_flexed img {
+    max-width: 130px;
+  }
+}
+
+.stock p {
+  font-weight: 400;
+  font-size: 15px !important;
+  color: #08906b;
+}
+
+.gift {
+  display: flex;
+}
+
+.gift input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.link {
+  color: #007185;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions select {
+  /* padding: 0.5rem; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.actions a {
+  padding-left: 10px;
+  text-decoration: none;
+  border: none;
+  color: #6db3d1;
+  cursor: pointer;
+}
+.actions a:after,
+.btn_container_delete:after {
+  content: "|";
+  /* position: absolute; */
+  right: 12px;
+  padding-left: 10px;
+  padding-right: -5px;
+  color: #cfe0e0;
+}
+
+.actions a:last-child:after {
+  content: none;
+}
+
+.actions a:hover,
+.btn_container_delete:hover {
+  color: #0889c0;
+  text-decoration: underline;
+}
+
+/* CartItem.module.css */
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.itemDetails {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.customQuantity {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80px;
+}
+
+.btn_container {
+  background-color: #eaeded;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btn_container button {
+  /* padding: 5px, 16px; */
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+.btn_container button:hover svg {
+  background-color: var(--primary-color);
+}
+.btn_container_delete {
+  padding: 5px, 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  color: #6db3d1;
+  font-weight: bold;
+}
+@media (max-width: 868px) {
+  .gift,
+  .actions {
+    display: none;
+  }
 }

@@ -17,9 +17,10 @@ import Header from "./components/Header/Header"
 import ProductDetail from "./Pages/ProductDetail/ProductDetail"
 
 
+
     const router = createBrowserRouter(
       createRoutesFromElements(
-        <Route path="/" element={<Header />}>
+        <Route path="/" element={<Header/>}>
           <Route path="/" element={<Landing />}></Route>
           <Route path="/auth" element={<SignUp />}></Route>
           <Route path="/order" element={<Order />}></Route>

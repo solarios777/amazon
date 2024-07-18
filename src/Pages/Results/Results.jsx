@@ -13,10 +13,6 @@ const Results = ({}) => {
   let { categoryName } = useParams();
   const [Isloading, setIsloading] = useState(true);
 
-  if (categoryName === "nen's clothing") {
-    // Correct the category name
-    categoryName = "men's clothing";
-  }
 
   ;
   const [results, setResults] = useState([]);
@@ -50,7 +46,14 @@ const Results = ({}) => {
         ) : (
           <div className={classes.products_container}>
             {results.map((product) => (
-              <ProductCard key={product.id} product={product} renderDesc={false} renderAdd={true} />
+              <ProductCard
+                key={product.id}
+                product={product}
+                renderDesc={false}
+                renderAdd={true}
+                needpra={true}
+                forcart={false}
+              />
             ))}
           </div>
         )}
