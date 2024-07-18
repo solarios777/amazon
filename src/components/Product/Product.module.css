@@ -41,7 +41,10 @@
   display: flex;
   align-items: center;
   padding: 10px 0px;
+  
 }
+
+
 .products_container {
   display: grid;
 
@@ -98,6 +101,7 @@
   .prduct_flexed {
     display: flex;
     flex-direction: column;
+    padding-left: 15px;
   }
   .product_forcart{
     display: flex;
@@ -114,12 +118,16 @@
     max-width: 150px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 415px) {
   .prduct_flexed img {
-    max-width: 130px;
+    max-width: 140px;
   }
 }
-
+@media (max-width: 355px) {
+  .prduct_flexed img {
+    max-width: 100px;
+  }
+}
 .stock p {
   font-weight: 400;
   font-size: 15px !important;

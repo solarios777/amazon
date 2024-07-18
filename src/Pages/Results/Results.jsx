@@ -12,8 +12,9 @@ import Loader from "../../components/Loader/Loader";
 const Results = ({}) => {
   let { categoryName } = useParams();
   const [Isloading, setIsloading] = useState(true);
-
-
+  
+  
+console.log(categoryName);
   ;
   const [results, setResults] = useState([]);
 

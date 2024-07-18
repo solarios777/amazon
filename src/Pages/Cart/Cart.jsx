@@ -184,7 +184,7 @@ const Cart = () => {
           )}
         </section>
       </>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

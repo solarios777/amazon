@@ -53,11 +53,16 @@
     display: none;
   }
 }
-@media (max-width: 400px) { 
+@media (max-width: 415px) { 
 
  .products_container{
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+margin-left: 20px;
+/* margin-right: -20px; */
+  }
+  .products_container img{
+    max-width: 140px;
+    
   }
   /* .products_container div div h3{
     font-size: 12px;

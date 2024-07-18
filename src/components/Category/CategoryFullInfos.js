@@ -40,7 +40,7 @@ export const categoryInfosmob = [
 
   {
     title: "Men's Clothing",
-    name: "nen's clothing",
+    name: "men's clothing",
     imgLink: "https://m.media-amazon.com/images/I/51otvbCJgML._AC_UL320_.jpg",
   },
 

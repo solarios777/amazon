@@ -64,7 +64,7 @@ const amount = cartItem ? cartItem.amount : 0;
           {needpra && (
             <div>
               <div className={classes.rating}>
-                <Rating value={rating?.rate} precision={0.1} />
+                <Rating value={rating?.rate} precision={0.1}/>
                 <small>{rating?.count}</small>
               </div>
               <div>
@@ -84,7 +84,6 @@ const amount = cartItem ? cartItem.amount : 0;
               </div>
               <div className={classes.actions}>
                 <div className={classes.btn_container}>
-                 
                   <button
                     className={classes.decrement_btn}
                     onClick={() => decrement(item.id)}
