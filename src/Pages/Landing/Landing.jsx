@@ -8,7 +8,7 @@ import Footer from '../../components/Footer/Footer';
 
 const Landing = () => {
   return (
-    <div>
+    <div className="home">
       <Carouselc/>
       <Category/>
       <div className="product-container">

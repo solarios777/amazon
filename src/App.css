@@ -2,13 +2,17 @@
   /* background-color: black; */
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
   
 }
 *::-webkit-scrollbar {
   display: none;
 }
 :root{
-    --primary-color:#febd69;
-    --primary-shade:#d49644;
+    --primary-color:#FFD814;
+    --primary-shade:#F7CA00;
+}
+input:focus{
+    outline: 2px solid  #a5e4ee;
 }
 

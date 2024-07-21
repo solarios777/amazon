@@ -1,0 +1,303 @@
+.auth {
+  height: 100vh;
+}
+.login {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.logo img {
+  /* margin: 30px auto; */
+  object-fit: contain;
+  width: 100px;
+  height: auto;
+  background-color: white;
+}
+
+.signin_email_in,
+.signin_password {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  padding: 25px;
+}
+
+.signin_email h1 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.signin_email form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin_email form label {
+  padding-left: 2px;
+  padding-bottom: 2px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  cursor: default;
+}
+
+.signin_email form input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+.login a:hover {
+  color: #d55a31;
+}
+.signin_email_in button {
+  width: 100%;
+  height: 30px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.signin_email_in button:hover {
+  background-color: var(--primary-shade);
+}
+
+.signin_email_in small {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  margin: 18px 0px !important;
+  width: 100%;
+}
+
+.signin_email a {
+  color: #0066c0;
+  text-decoration: underline;
+}
+.signin_email_link a {
+  color: #0066c0;
+  font-size: 13px;
+  line-height: 19px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+hr {
+  background-color: transparent;
+  display: block;
+  height: 1px;
+  border-width: 0;
+  border-top: 1px solid #e7e7e7;
+  line-height: 19px;
+  margin-top: 35px;
+  margin-bottom: 24px;
+}
+.signin_email h4 {
+  font-size: 14px;
+  font-weight: 700 !important;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.signin_email_new {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+.signin_email_new h5 {
+  line-height: 1;
+  font-size: 12px;
+  color: #767676;
+  font-weight: 400;
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  padding: 0 8px 0 7px;
+  margin: 10px 0;
+}
+.signin_email_new button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  margin: 0;
+  outline: 0;
+  padding: 0 10px 0 11px;
+  text-align: center;
+  white-space: nowrap;
+}
+.signin_password {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.signin_password h1 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.signin_password span {
+  font-size: 13px;
+  line-height: 19px;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+}
+.signin_password span button {
+  background-color: transparent !important;
+  margin-left: -30px;
+  margin-top: -6px;
+  color: #0066c0;
+}
+
+.signin_password a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.signin_password_pass {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+
+  font-size: 13px;
+  line-height: 19px;
+}
+.signin_password_pass p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.signin_password input {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.signin_password button {
+  width: 300px;
+  height: 30px;
+  background-color: #ffd814;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.signin_password button:hover {
+  background-color: var(--primary-shade);
+}
+.signin_password_check p {
+  font-size: 13px;
+  line-height: 19px;
+}
+.signin_password div:last-child {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.signin_password div:last-child input {
+  width: auto;
+  height: auto;
+  margin-right: 5px;
+}
+.login_foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.login_foot_link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.login_foot_link a {
+  font-size: 12px;
+  color: #0066c0;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.login_foot small {
+  font-size: 11px;
+  color: #555;
+}
+.signin_passchar {
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+.signin_already {
+  margin-top: 40px;
+  font-size: 14px;
+}
+.signin_already button {
+  background-color: transparent !important;
+  margin-left: -30px;
+  margin-top: -6px;
+  color: #0066c0;
+  width: 120px;
+}
+.warning {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  border-radius: 10px;
+  border: 1px solid red;
+  padding: 25px;
+  margin: auto;
+}
+.warning h4 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.255;
+  color: #c40000;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 4px;
+  position: relative;
+  
+}
+.warning_symbol {
+  /* height: 27px;
+  width: 30px; */
+margin-right: 15px;
+position: relative;
+top: 5px;
+}

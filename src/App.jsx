@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./App.css";
-// import {
-//   createBrowserRouter,
-//   Route,
-//   createRoutesFromElements,
-//   RouterProvider,
-// } from "react-router-dom";
-import Header from "./components/Header/Header";
-
 import Routing from "./Router";
-
+import { DataContext } from "./components/DataProvider/DataProvider";
+import {auth} from "./Utility/Firebase.js"
+import { Type } from "./Utility/Action.type";
 const App = () => {
+  const [{user},dispatch]=useContext(DataContext)
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authuser) => {
+      if (authuser) {
+        dispatch(
+          {
+            type: Type.SET_USER,
+            user: authuser 
+          }
+          
+        )
+      } else {
+         dispatch(
+          {
+            type: Type.SET_USER,
+            user:null
+          })
+      }
+    })
+  
+  }, [])
   
   return (
     <>
@@ -20,18 +36,5 @@ const App = () => {
   );
 };
 
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<Header />}>
-//       <Route path="/" element={<Home />}></Route>
-//       {/* <Route path="/home" element={<Home />}></Route> */}
-//       {/* <Route path="/detail/:id" element={<Detail/>}></Route> */}
-//     </Route>
-//   )
-// );
-
-// function App() {
-//   return <RouterProvider router={router} />;
-// }
 
 export default App;
