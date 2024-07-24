@@ -1,14 +1,15 @@
 import React, { useState, useContext } from "react";
 import classes from "./SignUp.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { TbInfoSmall } from "react-icons/tb";
 import { auth } from "../../Utility/Firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { DataContext } from "../../components/DataProvider/DataProvider";
 import { ClipLoader } from "react-spinners";
 import { CiWarning } from "react-icons/ci";
+import { Type } from "../../Utility/Action.type";
 
-const SignUp = ({ onSignInClick }) => {
+const SignUp = ({ onSignInClick, navstateData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -16,6 +17,7 @@ const SignUp = ({ onSignInClick }) => {
   const [{ user }, dispatch] = useContext(DataContext);
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
+  const [name, setname] = useState("");
 
   const signUpHandler = (e) => {
     e.preventDefault();
@@ -27,20 +29,25 @@ const SignUp = ({ onSignInClick }) => {
       return;
     }
 
-   createUserWithEmailAndPassword(auth, email, password)
-     .then((userInfo) => {
-       console.log(userInfo);
-       dispatch({
-         type: Type.SET_USER,
-         user: userInfo.user,
-       });
-       setloading(false);
-       navigate("/payment"); 
-     })
-     .catch((err) => {
-       setError(err.message);
-       setloading(false);
-     });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userInfo) => {
+        dispatch({
+          type: Type.SET_USER,
+          user: userInfo.user,
+        });
+        setloading(false);
+        // if (!error) {
+        navigate(navstateData?.state?.redirect || "/");
+
+        // }
+
+        // Redirect the user to the home page
+      })
+      .catch((err) => {
+        console.log(err);
+        setError(err.message);
+        setloading(false);
+      });
   };
 
   return (
@@ -61,6 +68,16 @@ const SignUp = ({ onSignInClick }) => {
           <div className={classes.signin_email_in}>
             <h1>Create account</h1>
             <form action="">
+              <label htmlFor="name">Name</label>
+              <input
+                type="name"
+                id="name"
+                value={name}
+                onChange={(e) => {
+                  setError(false);
+                  setname(e.target.value);
+                }}
+              />
               <label htmlFor="email">Mobile number or email</label>
               <input
                 type="email"
@@ -98,11 +115,7 @@ const SignUp = ({ onSignInClick }) => {
 
               {/* signuphandler button */}
               <button type="submit" onClick={signUpHandler} name="signUp">
-                {loading ? (
-                  <ClipLoader color="#0066c0" size={15} />
-                ) : (
-                  "Continue"
-                )}
+                {loading ? <ClipLoader color="#0066c0" size={15} /> : "Sign up"}
               </button>
             </form>
             <small>

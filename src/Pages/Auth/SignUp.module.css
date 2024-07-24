@@ -301,3 +301,53 @@ margin-right: 15px;
 position: relative;
 top: 5px;
 }
+.amazon-payment-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.amazon-payment-page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.amazon-logo img {
+  max-width: 100px;
+}
+
+.amazon-payment-page-title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.amazon-payment-section {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.section-content {
+  margin-top: 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.visible .section-content {
+  max-height: 500px; /* Adjust this value to fit your content */
+  transition: max-height 0.5s ease-in;
+}

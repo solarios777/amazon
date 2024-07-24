@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import classes from "./SignUp.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { auth } from "../../Utility/Firebase";
 import { AuthErrorCodes, signInWithEmailAndPassword } from "firebase/auth";
 import { CiWarning } from "react-icons/ci";
@@ -17,11 +17,13 @@ const SignIn = ({ onSignUpClick }) => {
   const [{ user }, dispatch] = useContext(DataContext);
   const [loading, setloading] = useState("");
   const navigate = useNavigate();
+  const navstateData = useLocation();
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
     setShowSignInEmail(true);
     setError(false);
   };
+  console.log(navstateData);
   const handleContinueClick = () => {
     if (email.trim() !== "") {
       setShowSignInEmail(false);
@@ -44,7 +46,7 @@ const SignIn = ({ onSignUpClick }) => {
           user: userInfo.user,
         });
         setloading(false);
-        navigate("/");
+        navigate(navstateData?.state?.redirect || "/");
       })
       .catch((err) => {
         setError(err.message);
@@ -70,6 +72,18 @@ const SignIn = ({ onSignUpClick }) => {
           <div className={classes.signin_email} id="/email">
             <div className={classes.signin_email_in}>
               <h1>Sign in</h1>
+              {navstateData?.state?.msg && (
+                <small
+                  style={{
+                    padding: "5px",
+                    textAlign: "center",
+                    color: "red",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {navstateData?.state?.msg}
+                </small>
+              )}
               <form action="">
                 <label htmlFor="email">Email or mobile phone number</label>
                 <input

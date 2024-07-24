@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import classes from "./SignUp.module.css";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import SignIn from "./Signin";
 import SignUp from "./Signup";
 import { MdOutlineCopyright } from "react-icons/md";
 
 
 const Auth = () => {
-   const [showSignIn, setShowSignIn] = useState(true);
+  const [showSignIn, setShowSignIn] = useState(true);
+  const navstateData = useLocation()
+  console.log(navstateData);
 
    const handleSignInClick = () => {
      setShowSignIn(true);
@@ -32,7 +34,10 @@ const Auth = () => {
         {showSignIn ? (
           <SignIn onSignUpClick={handleSignUpClick} />
         ) : (
-          <SignUp onSignInClick={handleSignInClick} />
+          <SignUp
+            onSignInClick={handleSignInClick}
+            navstateData={navstateData}
+          />
         )}
 
         <hr />

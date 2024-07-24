@@ -1,0 +1,169 @@
+/* Amazon Payment Page Styles */
+.amazon-payment-page-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.amazon-payment-page-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.amazon-logo img {
+  width: 120px;
+  height: auto;
+}
+
+.amazon-payment-page-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.amazon-payment-section {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  background-color: #FFFFFF;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.section-content {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+
+.amazon-checkout-form-group {
+  margin-bottom: 15px;
+}
+
+.amazon-checkout-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.amazon-checkout-form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.amazon-checkout-form-group-three {
+  display: flex;
+  justify-content: space-between;
+}
+
+.amazon-checkout-form-group-three .amazon-checkout-form-group {
+  flex-basis: 30%;
+}
+
+.amazon-checkout-button {
+  background-color: #ffd814;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.section-header-title{
+  display: flex;
+  justify-content: space-between;
+}
+.amazon-checkout-order-summary {
+  background-color: #FFFFFF ;
+  padding: 20px;
+}
+
+.amazon-checkout-order-item {
+  font-size: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.amazon-checkout-order-item img {
+  width: 90px !important;
+  height: auto;
+  margin-right: 10px;
+}
+
+.amazon-checkout-order-item-details {
+  flex-grow: 1;
+}
+
+
+
+.visible {
+  display: block;
+}
+
+.section-content-add{
+  display: flex;
+  justify-content: center;
+  margin-top:-22px ;
+}
+
+.section-header-title small {
+  color: #0085BB;
+}
+.section-header-title small:hover{
+  text-decoration: underline;
+  color: rgb(224, 68, 68);
+
+}
+hr{
+  color: #000 !important;
+}
+.text-red{
+  color: red;
+}
+.form{
+  margin: 20px;
+}
+.payment-price{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.payment-price span{
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  gap: 10px;
+}
+@media (max-width:768px){
+  .section-content-add{
+    margin-top: 10px;
+  }
+
+}
+.amazon-checkout-button:hover{
+  background-color: var(--primary-shade);
+
+}
+.processing{
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgb(52 52 52);
+}

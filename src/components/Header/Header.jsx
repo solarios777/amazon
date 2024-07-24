@@ -4,7 +4,6 @@ import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import  classes from "./header.module.css"
 import LowerHeader from "./LowerHeader";
-import Carouselc from "../Carouselc/Carouselc";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
@@ -12,6 +11,7 @@ import { auth } from "../../Utility/Firebase";
 
 const Header = () => {
   const [{ user, basket }, dispatch] = useContext(DataContext)
+  
   const totalItem = basket?.reduce((amount, item) => {
     return item.amount + amount
   },0)
@@ -71,7 +71,7 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
-              <Link to="/order" className={classes.return}>
+              <Link to="/orders" className={classes.return}>
                 <p>returns</p>
                 <span>& Orders</span>
               </Link>

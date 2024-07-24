@@ -1,0 +1,76 @@
+/* Order.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.orders_container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+.orders_container img {
+  width: 180px !important;
+}
+.orders_container h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.order_item {
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0;
+}
+
+.order_hr {
+  border-color: #c40000 !important;
+  border-width: 2px ip !important;
+}
+
+.order_item:last-child {
+  border-bottom: none;
+}
+
+.order_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.order_details p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.order_details p:last-child {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.order_items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+
+.order_items > * {
+  /* flex: 0 0 25%; */
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  /* .order_items > * {
+    flex: 0 0 50%;
+  } */
+  .orders_container img {
+    width: 100px !important;
+    padding-bottom: 0px !important;
+  }
+}

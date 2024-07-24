@@ -3,7 +3,7 @@ import { Type } from "./Action.type";
 
 export const initialState = {
   basket: [],
-  user:null,
+  user: null,
 };
 
 export const reducer = (state, action) => {
@@ -32,9 +32,8 @@ export const reducer = (state, action) => {
 
     case Type.REMOVE_FROM_BASKET:
       const index = state.basket.findIndex((item) => item.id === action.id);
-      
+
       let newBasket = [...state.basket];
-      
 
       if (index >= 0) {
         if (newBasket[index].amount > 1) {
@@ -50,21 +49,28 @@ export const reducer = (state, action) => {
         ...state,
         basket: newBasket,
       };
+    
+    case Type.EMPTY_BASKET:
+      return {
+        ...state,
+        basket: [],
+      };
+
     case Type.DELETE:
       const inde = state.basket.findIndex((item) => item.id === action.id);
-      
-      let neBasket = [...state.basket];
-          neBasket.splice(inde, 1);
 
-           return {
-             ...state,
-             basket: neBasket,
-           };
+      let neBasket = [...state.basket];
+      neBasket.splice(inde, 1);
+
+      return {
+        ...state,
+        basket: neBasket,
+      };
     case Type.SET_USER:
       return {
         ...state,
-        user:action.user
-      }
+        user: action.user,
+      };
     default:
       return state;
   }
