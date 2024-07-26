@@ -23,7 +23,7 @@ const SignIn = ({ onSignUpClick }) => {
     setShowSignInEmail(true);
     setError(false);
   };
-  console.log(navstateData);
+  
   const handleContinueClick = () => {
     if (email.trim() !== "") {
       setShowSignInEmail(false);
@@ -40,7 +40,7 @@ const SignIn = ({ onSignUpClick }) => {
     setloading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userInfo) => {
-        console.log(userInfo);
+        
         dispatch({
           type: Type.SET_USER,
           user: userInfo.user,

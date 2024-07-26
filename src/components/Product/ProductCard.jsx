@@ -49,7 +49,7 @@ const cartItem = basket.find((item) => item.id === id);
 const amount = cartItem ? cartItem.amount : 0;
 
   return (
-    <>
+    <div>
       <div
         className={`${classes.card_container} ${
           flex ? classes.prduct_flexed : ""
@@ -64,7 +64,7 @@ const amount = cartItem ? cartItem.amount : 0;
           {needpra && (
             <div>
               <div className={classes.rating}>
-                <Rating value={rating?.rate} precision={0.1}/>
+                <Rating value={rating?.rate} precision={0.1} />
                 <small>{rating?.count}</small>
               </div>
               <div>
@@ -118,7 +118,7 @@ const amount = cartItem ? cartItem.amount : 0;
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

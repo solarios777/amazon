@@ -7,6 +7,7 @@ import productUrl from "../../API/Endpoints";
 import ProductCard from "../../components/Product/ProductCard";
 import Mob from "../../components/MobPro/Mob";
 import Loader from "../../components/Loader/Loader";
+import Footer from "../../components/Footer/Footer";
 
 
 const Results = ({}) => {
@@ -34,32 +35,35 @@ console.log(categoryName);
   }, [categoryName]);
 
   return (
-    <section>
-      <h1 style={{ padding: "30px" }}>Results</h1>
-      <p style={{ padding: "30px" }}>Category/{categoryName}</p>
-      <hr />
+    <>
+      <section>
+        <h1 style={{ padding: "30px" }}>Results</h1>
+        <p style={{ padding: "30px" }}>Category/{categoryName}</p>
+        <hr />
 
-      <div>
-        {Isloading ? (
-          <div>
-            <Loader />
-          </div>
-        ) : (
-          <div className={classes.products_container}>
-            {results.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                renderDesc={false}
-                renderAdd={true}
-                needpra={true}
-                forcart={false}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
+        <div>
+          {Isloading ? (
+            <div>
+              <Loader />
+            </div>
+          ) : (
+            <div className={classes.products_container}>
+              {results.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  renderDesc={false}
+                  renderAdd={true}
+                  needpra={true}
+                  forcart={false}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+      <Footer/>
+    </>
   );
 };
 

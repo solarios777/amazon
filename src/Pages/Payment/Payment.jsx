@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import "./ShippingForm.css";
+import "./Payment.css";
 import { DataContext } from "../../components/DataProvider/DataProvider";
 import ProductCard from "../../components/Product/ProductCard";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
@@ -303,7 +303,6 @@ const AmazonPaymentPage = () => {
             )}
           </div>
         </div>
-
         <div
           className={`amazon-payment-section ${
             activeSection === "payment" ? "visible" : "hidden"
@@ -348,8 +347,41 @@ const AmazonPaymentPage = () => {
             )}
           </div>
         </div>
-
         <hr />
+
+        <main className="main-content">
+          <section className="help-information">
+            <p>
+              Need help? Check our <a href="#">Help pages</a> or
+              <a href="#">contact us</a>
+            </p>
+          </section>
+          <section className="order-confirmation">
+            <p>
+              For an item sold by Amazon.com: When you click the "Place your
+              order" button, we'll send you an email message acknowledging
+              receipt of your order. Your contract to purchase an item will not
+              be complete until we send you an email notifying you that the item
+              has been shipped.
+            </p>
+          </section>
+          <section className="sales-tax-information">
+            <a href="#">
+              Important information about sales tax you may owe in your state
+            </a>
+            <p>
+              You may return new, unopened merchandise in original condition
+              within 30 days of delivery. Exceptions and restrictions apply. See
+              Amazon.com's Returns Policy.
+            </p>
+          </section>
+          <section className="call-to-action">
+            <p>
+              Need to add more items to your order? Continue shopping on the
+              <a href="/"> Amazon.com homepage</a>.
+            </p>
+          </section>
+        </main>
       </div>
     </div>
   );

@@ -41,10 +41,15 @@
 .container div:not(.subtotal) {
   height: auto !important;
 }
-.cart_container {
-  
+.noitem{
+  padding-left: 30px;
+  padding-top: 30px;
+  /* margin-bottom: -40px; */
 }
-
+.noitem hr{
+  height: 3px;
+  color: red !important;
+}
 .upper_part h1 {
   padding: 10px;
   font-weight: 400;

@@ -5,6 +5,7 @@ import axios from "axios";
 import ProductCard from "../../components/Product/ProductCard";
 import productUrl from "../../API/Endpoints";
 import Loader from "../../components/Loader/Loader";
+import Footer from "../../components/Footer/Footer";
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -28,22 +29,25 @@ const ProductDetail = () => {
   
 
   return (
-    <div>
-      {Isloading ? (
-        <div>
-          <Loader />
-        </div>
-      ) : (
-        <ProductCard
-          product={product}
-          flex={true}
-          renderDesc={true}
-          renderAdd={true}
-          needpra={true}
-          forcart={false}
-        />
-      )}
-    </div>
+    <>
+      <div>
+        {Isloading ? (
+          <div>
+            <Loader />
+          </div>
+        ) : (
+          <ProductCard
+            product={product}
+            flex={true}
+            renderDesc={true}
+            renderAdd={true}
+            needpra={true}
+            forcart={false}
+          />
+        )}
+      </div>
+      <Footer/>
+    </>
   );
 };
 

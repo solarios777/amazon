@@ -48,18 +48,30 @@ const Cart = () => {
                 <CurrencyFormat amount={total} />
               </span>
             </div>
-          ) : null}
+          ) : (
+            <div className={classes.noitem}>
+              <h2>Your Amazon Cart is empty</h2>
+              <hr color="red" />
+            </div>
+          )}
+          {basket?.length !== 0 ? (
+            <>
+              {" "}
+              <Link to="/payments" className={classes.proceed_to_checkout}>
+                proceed to checkout({basket?.length} items)
+              </Link>
+              <div className={classes.gift_checkbox}>
+                <input type="checkbox" />
+                <small>This order contains a gift</small>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
 
-          <Link to="/payments" className={classes.proceed_to_checkout}>
-            proceed to checkout({basket?.length} items)
-          </Link>
-          <div className={classes.gift_checkbox}>
-            <input type="checkbox" />
-            <small>This order contains a gift</small>
-          </div>
           <hr />
           {basket?.length == 0 ? (
-            <p>Opps !!! No item in your cart</p>
+            <p style={{ paddingLeft: "20%" }}>Opps !!! No item in your cart</p>
           ) : (
             <section>
               {basket.map((item, i) => (
@@ -144,15 +156,6 @@ const Cart = () => {
                       <span
                         className={classes.price_span}
                       >{`$${item.price}`}</span>
-                      {/* <div className={classes.btn_container}>
-                      <button onClick={() => increment(item)}>
-                        <IoIosArrowUp size={25} />
-                      </button>
-                      <span>{item.amount}</span>
-                      <button onClick={() => decrement(item.id)}>
-                        <IoIosArrowDown size={25} />
-                      </button>
-                    </div> */}
                     </div>
                     <hr />
                   </>
@@ -179,12 +182,12 @@ const Cart = () => {
                 <input type="checkbox" />
                 <small>This order contains a gift</small>
               </span>
-              <Link to= "/payments">proceed to checkout</Link>
+              <Link to="/payments">proceed to checkout</Link>
             </div>
           )}
         </section>
       </>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

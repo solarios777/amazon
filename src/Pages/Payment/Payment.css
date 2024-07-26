@@ -167,3 +167,40 @@ hr{
   gap: 10px;
   color: rgb(52 52 52);
 }
+/* CSS */
+.amazon-page {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.header {
+  /* Styles for the header section */
+}
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 11px!important;
+    line-height: 16px!important;
+    color: #504c4c;
+}
+
+.help-information,
+.order-confirmation,
+.sales-tax-information,
+.call-to-action {
+  margin-bottom: 10px;
+}
+.sales-tax-information a,
+.help-information a,
+.call-to-action a {
+  color: #007185;
+  text-decoration: none;
+}
+
+.help-information a:hover,
+.call-to-action a:hover {
+  text-decoration: underline;
+}

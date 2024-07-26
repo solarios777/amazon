@@ -1,8 +1,4 @@
-.fixed{
-  position: sticky;
-  z-index: 10;
-  top: 0;
-}
+
 
 .section{
   max-width: 100vw;
@@ -128,9 +124,12 @@
   padding: 15px;
 
 }
+.return p,.Signin p{
+  font-size: 12px !important;
+}
 .return span,.Signin span,.cart p{
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }
 .cart {
   position: relative;
@@ -192,6 +191,7 @@
 .logo_container{padding-left: 2%;}
 }
 @media (max-width: 900px) {
+  
   .header_container {
     height: auto;
     flex-wrap: wrap;
@@ -260,4 +260,18 @@
 }
 .Lowdelivery div {
   display: flex;
+}
+@media (max-width: 768px) {
+  .fixed{
+    position: relative;
+  }
+  .return p,.Signin p{
+  font-size: 9px !important;
+}
+.return ,.Signin {margin-left: -30px;}
+.return span,.Signin span,.cart p{
+  font-weight: bold;
+  font-size: 10px;
+  
+}
 }

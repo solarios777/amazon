@@ -1,3 +1,4 @@
+
 .card_container {
   width: 250px;
   box-shadow: 0 0 10 rgba(0, 0, 0, 0.2);
@@ -5,6 +6,8 @@
   color: black;
   text-decoration: none;
   position: relative;
+  background-color: white;
+  border: 1px solid rgb(231, 228, 228);
 }
 .card_container:hover .button {
   display: block;

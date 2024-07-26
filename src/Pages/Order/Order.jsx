@@ -11,6 +11,7 @@ import {
   orderBy,
   
 } from "firebase/firestore";
+import Footer from "../../components/Footer/Footer";
 const Order = () => {
   const [{ user }, dispatch] = useContext(DataContext);
   const [orders, setOrders] = useState([]);
@@ -37,37 +38,40 @@ const Order = () => {
   }, [user]);
 
   return (
-    <section className={classes.container}>
-      <div className={classes.orders_container}>
-        <h2>Your Orders</h2>
-        {orders?.length === 0 && (
-          <div>
-            <hr className={classes.order_hr} />
-            <p>Looks like you haven't placed an order </p>
-          </div>
-        )}
-        {/* ordered items */}
+    <>
+      <section className={classes.container}>
+        <div className={classes.orders_container}>
+          <h2>Your Orders</h2>
+          {orders?.length === 0 && (
+            <div>
+              <hr className={classes.order_hr} />
+              <p>Looks like you haven't placed an order </p>
+            </div>
+          )}
+          {/* ordered items */}
 
-        <div>
-          {orders?.map((eachOrder, i) => {
-            return (
-              <div key={i}>
-                <hr className={classes.order_hr} />
-                <p>Order ID: {eachOrder?.id}</p>
-                {eachOrder?.data.basket?.map((order) => (
-                  <ProductCard
-                    product={order}
-                    flex={true}
-                    needpra={true}
-                    key={order.id}
-                  />
-                ))}
-              </div>
-            );
-          })}
+          <div>
+            {orders?.map((eachOrder, i) => {
+              return (
+                <div key={i}>
+                  <hr className={classes.order_hr} />
+                  <p>Order ID: {eachOrder?.id}</p>
+                  {eachOrder?.data.basket?.map((order) => (
+                    <ProductCard
+                      product={order}
+                      flex={true}
+                      needpra={true}
+                      key={order.id}
+                    />
+                  ))}
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <Footer/>
+    </>
   );
 };
 
